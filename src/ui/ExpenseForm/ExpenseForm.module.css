@@ -1,11 +1,11 @@
 .form {
   width: 768px;
-  height: 100px;
-
+  height: max-content;
   padding: 10px 30px;
   margin-top: 60px;
 
-  position: relative;
+  position: absolute;
+  top: 50;
 
   background: linear-gradient(
     180deg,
@@ -18,12 +18,13 @@
   flex-direction: column;
 }
 
-.form::after {
+.form::before {
   content: "";
   position: absolute;
   inset: -1px;
   z-index: -10;
   border-radius: 20px;
+  background: red;
   background: #292929;
   background: linear-gradient(
     180deg,
@@ -56,7 +57,7 @@
   border-color: #a3a3a3;
 }
 
-.input-wrapper::after {
+.input-wrapper::before {
   content: "";
 
   width: 20px;
@@ -73,6 +74,13 @@
   pointer-events: none;
 }
 
+.input-wrapper::after {
+  content: "руб.";
+  position: absolute;
+  color: var(--border-color);
+  right: 10px;
+}
+
 .input {
   border-left: 1px solid var(--border-color);
   padding-left: 10px;
@@ -80,10 +88,14 @@
   font-size: 18px;
 }
 
-.main-btn {
-  background-color: #fff;
-  color: #000;
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.main-btn,
+.reset-btn {
   font-size: 18px;
 
   border-radius: 15px;
@@ -94,6 +106,60 @@
   cursor: pointer;
 }
 
-.main-btn:hover {
-  transform: scale(1.01);
+.main-btn {
+  background-color: #fff;
+  color: #000;
+  transition: all ease-in 0.2s;
+}
+
+.main-btn:disabled {
+  outline: 1px solid var(--border-color);
+  background-color: transparent;
+  color: var(--border-color);
+  cursor: default;
+}
+
+.main-btn:disabled:hover {
+  transform: none;
+}
+
+.reset-btn {
+  border: 1px solid var(--border-color);
+  background-color: #1a1a1a;
+  color: #ffffff;
+  transition: transform ease-in 0.2s;
+}
+
+.main-btn:hover,
+.reset-btn:hover {
+  transform: scale(1.02);
+}
+
+.select-wrapper {
+  width: min-content;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.select option {
+  background-color: #000;
+  color: #fff;
+}
+
+.textarea-wrapper {
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.textarea {
+  width: 100%;
+  resize: none;
+}
+
+.textarea:focus {
+  outline: none;
 }

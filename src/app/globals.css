@@ -26,4 +26,9 @@ body {
     outline: none;
     background: transparent;
   }
+
+  select:focus {
+    border: none;
+    outline: none;
+  }
 }
