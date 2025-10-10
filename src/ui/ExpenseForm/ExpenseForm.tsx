@@ -9,7 +9,7 @@ interface ExpenseForm {
   comment: string;
 }
 
-export default function ExpenseForm() {
+export default function ExpenseForm({ closeForm }: { closeForm: () => void }) {
   const { register, handleSubmit, formState, reset } = useForm<ExpenseForm>({
     mode: "onChange",
   });
@@ -21,6 +21,7 @@ export default function ExpenseForm() {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      <button className={styles["close-btn"]} onClick={closeForm}></button>
       <h2 className={styles.title}>Расход</h2>
       <label htmlFor="amount" className={styles["input-title"]}>
         Сумма
