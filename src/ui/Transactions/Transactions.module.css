@@ -1,0 +1,53 @@
+.title {
+  font-size: 20px;
+  font-weight: 200;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+
+.transactions {
+  background: #202020;
+  background: linear-gradient(
+    180deg,
+    rgba(32, 32, 32, 1) 0%,
+    rgba(32, 32, 32, 0.7) 50%,
+    rgba(32, 32, 32, 1) 100%
+  );
+  border-block: 1px solid var(--border-color);
+
+  border-radius: 10px;
+  padding: 10px 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding-block: 7px;
+}
+
+.list-item:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.list-item_title-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.amount {
+  color: #ff7979;
+}
+
+.amount-plus {
+  color: #75ff7c;
+}

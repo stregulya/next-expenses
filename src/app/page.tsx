@@ -1,19 +1,15 @@
-"use client";
-
-import ExpenseForm from "@/ui/ExpenseForm/ExpenseForm";
-import { useState } from "react";
+import Buttons from "@/ui/Buttons/Buttons";
+import OverallBalance from "@/ui/OverallBalance/OverallBalance";
+import Stats from "@/ui/Stats/Stats";
+import Transactions from "@/ui/Transactions/Transactions";
 
 export default function Home() {
-  const [formIsActive, setFormIsActive] = useState(true);
-
-  const closeForm = () => {
-    setFormIsActive(false);
-  };
-
   return (
-    <main className="flex justify-center min-h-screen">
-      {formIsActive && <ExpenseForm closeForm={closeForm} />}
-      <button onClick={() => setFormIsActive(true)}>Добавить расход</button>
+    <main>
+      <OverallBalance />
+      <Buttons />
+      <Transactions />
+      <Stats />
     </main>
   );
 }

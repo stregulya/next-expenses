@@ -1,0 +1,15 @@
+.header {
+  background: #202020;
+  background: linear-gradient(
+    180deg,
+    rgba(32, 32, 32, 1) 0%,
+    rgba(32, 32, 32, 0.1) 100%
+  );
+  border-top: 1px solid var(--border-color);
+
+  border-radius: 10px;
+  padding: 10px 20px;
+
+  font-size: 35px;
+  font-weight: 500;
+}

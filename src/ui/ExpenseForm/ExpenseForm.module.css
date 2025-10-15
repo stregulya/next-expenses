@@ -1,11 +1,17 @@
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
 .form {
   width: 768px;
   height: max-content;
   padding: 10px 30px;
-  margin-top: 60px;
 
-  position: absolute;
-  top: 50;
+  position: relative;
 
   background: linear-gradient(
     180deg,
@@ -21,10 +27,9 @@
 .form::before {
   content: "";
   position: absolute;
-  inset: -1px;
   z-index: -10;
+  inset: -1px;
   border-radius: 20px;
-  background: red;
   background: #292929;
   background: linear-gradient(
     180deg,
@@ -34,9 +39,6 @@
 }
 
 .title {
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 1;
   margin-bottom: 30px;
 }
 
@@ -182,7 +184,7 @@
   top: 50%;
   left: 50%;
   height: 1px;
-  width: 90%;
+  width: 85%;
   background-color: #a3a3a3;
 }
 
@@ -192,4 +194,18 @@
 
 .close-btn::after {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.success-message {
+  animation: 3.1s linear 0s disappearance;
+  transition: all ease-in 0.2s;
+}
+
+@keyframes disappearance {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
