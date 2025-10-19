@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru" className={raleway.className}>
-      <body className="bg-main bg-[url(/background.webp)] bg-cover bg-repeat-y backdrop-blur-[7px] text-white min-h-screen">
+      <body className="bg-main bg-[url(/background.webp)] bg-cover bg-repeat-y backdrop-blur-[7px] text-white min-h-screen flex flex-col">
         <Header />
         {children}
         <Footer />

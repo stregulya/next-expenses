@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <footer className="px-1.5 pt-1.5 mx-auto">
+    <footer className="px-1.5 pt-1.5 mx-auto pb-1.5 w-full mt-auto">
       <div className={styles.footer}>
         <Image src="/ruble-gray.svg" alt="рубль" width={30} height={30} />
       </div>
