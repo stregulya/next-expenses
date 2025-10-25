@@ -5,7 +5,7 @@ import Transactions from "@/ui/Transactions/Transactions";
 
 export default function Home() {
   return (
-    <main>
+    <main className="grow">
       <OverallBalance />
       <Buttons />
       <Transactions />

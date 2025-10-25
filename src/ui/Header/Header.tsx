@@ -5,7 +5,9 @@ export default function Header() {
   return (
     <header className="px-1.5 pt-1.5 mx-auto w-full">
       <div className={styles["header"]}>
-        <Link href={"/"}>Ex</Link>
+        <Link href={"/"} className="font-extralight">
+          Ex
+        </Link>
       </div>
     </header>
   );
