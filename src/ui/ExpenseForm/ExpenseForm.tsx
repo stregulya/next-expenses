@@ -3,6 +3,7 @@
 import styles from "./ExpenseForm.module.css";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
+import Link from "next/link";
 
 interface ExpenseForm {
   amount: number;
@@ -29,7 +30,7 @@ export default function ExpenseForm() {
   return (
     <div className={styles.wrapper}>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-        <button className={styles["close-btn"]}></button>
+        <Link className={styles["close-btn"]} href={"/"}></Link>
         <h2 className={styles.title}>Расход</h2>
 
         <label htmlFor="amount" className={styles["input-title"]}>
